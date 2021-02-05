@@ -1,0 +1,37 @@
+{
+  "name": "ses-aws-node",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "license": "MIT",
+  "scripts": {
+    "prestart": "tsc",
+    "build": "tsc",
+    "package": "pkg . --target node12-win-x64 --options max_old_space_size=4096",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "start": "node ./dist/server.js"
+  },
+  "bin": "dist/server.js",
+  "pkg": {
+    "scripts": "dist/*.js",
+    "targets": [
+      "node10-win",
+      "node10-linux",
+      "node10-macos"
+    ]
+  },
+  "dependencies": {
+    "aws-sdk": "^2.838.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.14.25",
+    "pkg": "^4.4.9",
+    "ts-node-dev": "^1.0.0-pre.64",
+    "typescript": "^4.0.3"
+  }
+}
