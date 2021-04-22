@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "tsc",
     "build": "tsc",
-    "package": "pkg . --target node12-win-x64 --options max_old_space_size=4096",
+    "package": "tsc && pkg . --target node12-win-x64 --options max_old_space_size=4096",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "start": "node ./dist/server.js"
   },
