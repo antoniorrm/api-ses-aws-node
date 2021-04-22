@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 const SES_CONFIG = {
   accessKeyId: process.env.ACCESSKEYID,
-  secretAccessKey: process.env.SECRETACCESSKEY,
+  secretAccessKey:
+    process.env.SECRETACCESSKEY,
   region: "us-east-1",
 };
 
